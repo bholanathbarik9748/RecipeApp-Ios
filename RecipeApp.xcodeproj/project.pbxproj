@@ -94,6 +94,8 @@
 		E5DB1B482C6142C8009CB7B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E5DB1B562C614931009CB7B6 /* MealModel.swift */,
+				E5DB1B582C614A8F009CB7B6 /* SingleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,8 +103,6 @@
 		E5DB1B492C6142D3009CB7B6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E5DB1B562C614931009CB7B6 /* MealModel.swift */,
-				E5DB1B582C614A8F009CB7B6 /* SingleModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
