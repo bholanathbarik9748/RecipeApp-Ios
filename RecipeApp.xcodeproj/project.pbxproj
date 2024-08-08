@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E570AFB22C6545E900F945BE /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E570AFB12C6545E900F945BE /* RecipeCard.swift */; };
 		E5DB1B352C61422E009CB7B6 /* RecipeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DB1B342C61422E009CB7B6 /* RecipeAppApp.swift */; };
 		E5DB1B392C614230009CB7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DB1B382C614230009CB7B6 /* Assets.xcassets */; };
 		E5DB1B3C2C614230009CB7B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DB1B3B2C614230009CB7B6 /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E570AFB12C6545E900F945BE /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
 		E5DB1B312C61422E009CB7B6 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DB1B342C61422E009CB7B6 /* RecipeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAppApp.swift; sourceTree = "<group>"; };
 		E5DB1B382C614230009CB7B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +46,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E570AFAC2C6544BE00F945BE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E570AFAE2C6545B700F945BE /* OwnRecipeCard */,
+				E570AFAD2C65459700F945BE /* RecipeCard */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E570AFAD2C65459700F945BE /* RecipeCard */ = {
+			isa = PBXGroup;
+			children = (
+				E570AFB12C6545E900F945BE /* RecipeCard.swift */,
+			);
+			path = RecipeCard;
+			sourceTree = "<group>";
+		};
+		E570AFAE2C6545B700F945BE /* OwnRecipeCard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OwnRecipeCard;
+			sourceTree = "<group>";
+		};
 		E5DB1B282C61422E009CB7B6 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +89,7 @@
 		E5DB1B332C61422E009CB7B6 /* RecipeApp */ = {
 			isa = PBXGroup;
 			children = (
+				E570AFAC2C6544BE00F945BE /* Shared */,
 				E5DB1B4A2C6142DA009CB7B6 /* Screen */,
 				E5DB1B492C6142D3009CB7B6 /* ViewModel */,
 				E5DB1B482C6142C8009CB7B6 /* Model */,
@@ -213,6 +240,7 @@
 			files = (
 				E5DB1B572C614931009CB7B6 /* MealModel.swift in Sources */,
 				E5DB1B532C614414009CB7B6 /* SplashScreen.swift in Sources */,
+				E570AFB22C6545E900F945BE /* RecipeCard.swift in Sources */,
 				E5DB1B592C614A8F009CB7B6 /* SingleModel.swift in Sources */,
 				E5DB1B4E2C61432B009CB7B6 /* MainPage.swift in Sources */,
 				E5DB1B3E2C614230009CB7B6 /* Persistence.swift in Sources */,
