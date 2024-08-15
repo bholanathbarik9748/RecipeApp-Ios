@@ -15,6 +15,8 @@
 		E589C8442C6E132B000CF7C4 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E589C8432C6E132B000CF7C4 /* Roboto-Thin.ttf */; };
 		E589C8462C6E1349000CF7C4 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E589C8452C6E1349000CF7C4 /* Roboto-Regular.ttf */; };
 		E589C8482C6E137E000CF7C4 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E589C8472C6E137D000CF7C4 /* Roboto-Bold.ttf */; };
+		E589C84C2C6E27BF000CF7C4 /* RecipeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589C84B2C6E27BF000CF7C4 /* RecipeServices.swift */; };
+		E589C84F2C6E39B0000CF7C4 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589C84E2C6E39B0000CF7C4 /* Filter.swift */; };
 		E5DB1B352C61422E009CB7B6 /* RecipeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DB1B342C61422E009CB7B6 /* RecipeAppApp.swift */; };
 		E5DB1B392C614230009CB7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DB1B382C614230009CB7B6 /* Assets.xcassets */; };
 		E5DB1B3C2C614230009CB7B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DB1B3B2C614230009CB7B6 /* Preview Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		E589C8432C6E132B000CF7C4 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		E589C8452C6E1349000CF7C4 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		E589C8472C6E137D000CF7C4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		E589C84B2C6E27BF000CF7C4 /* RecipeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeServices.swift; sourceTree = "<group>"; };
+		E589C84E2C6E39B0000CF7C4 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		E5DB1B312C61422E009CB7B6 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DB1B342C61422E009CB7B6 /* RecipeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAppApp.swift; sourceTree = "<group>"; };
 		E5DB1B382C614230009CB7B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 		E570AFAC2C6544BE00F945BE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E589C84D2C6E39A3000CF7C4 /* Filter */,
 				E570AFAE2C6545B700F945BE /* OwnRecipeCard */,
 				E570AFAD2C65459700F945BE /* RecipeCard */,
 			);
@@ -121,6 +126,14 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		E589C84D2C6E39A3000CF7C4 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				E589C84E2C6E39B0000CF7C4 /* Filter.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		E5DB1B282C61422E009CB7B6 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +181,7 @@
 		E5DB1B472C6142B4009CB7B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E589C84B2C6E27BF000CF7C4 /* RecipeServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -300,11 +314,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5DB1B572C614931009CB7B6 /* MealModel.swift in Sources */,
+				E589C84C2C6E27BF000CF7C4 /* RecipeServices.swift in Sources */,
 				E5DB1B532C614414009CB7B6 /* SplashScreen.swift in Sources */,
 				E570AFB22C6545E900F945BE /* RecipeCard.swift in Sources */,
 				E5DB1B592C614A8F009CB7B6 /* SingleModel.swift in Sources */,
 				E5DB1B4E2C61432B009CB7B6 /* MainPage.swift in Sources */,
 				E589C8392C6DF0C6000CF7C4 /* UserRecipe.swift in Sources */,
+				E589C84F2C6E39B0000CF7C4 /* Filter.swift in Sources */,
 				E5DB1B3E2C614230009CB7B6 /* Persistence.swift in Sources */,
 				E5DB1B352C61422E009CB7B6 /* RecipeAppApp.swift in Sources */,
 				E5DB1B552C61441C009CB7B6 /* Home.swift in Sources */,

@@ -2,7 +2,6 @@ import SwiftUI
 
 struct RecipeCard: View {
     var mealName: String
-    var mealCategory: String
     var mealImageUrl: String
     
     var body: some View {
@@ -71,7 +70,6 @@ struct RecipeCard: View {
 #Preview {
     RecipeCard(
         mealName: "Spaghetti Bolognese",
-        mealCategory: "Pasta",
         mealImageUrl: "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg"
     )
 }

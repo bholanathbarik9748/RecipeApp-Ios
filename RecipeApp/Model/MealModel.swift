@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct MealViewModel : Observable {
-   let meals : [MealData]
+struct MealViewModel : Observable, Decodable {
+    let meals : [MealData]
 }
 
-struct MealData : Observable {
+struct MealData : Observable, Decodable {
     let strMeal : String
     let strMealThumb : String
     let idMeal : String
