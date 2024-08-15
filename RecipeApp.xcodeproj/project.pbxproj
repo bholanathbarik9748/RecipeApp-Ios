@@ -101,6 +101,13 @@
 			path = SavedRecipe;
 			sourceTree = "<group>";
 		};
+		E589C83D2C6E1041000CF7C4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		E5DB1B282C61422E009CB7B6 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +127,7 @@
 		E5DB1B332C61422E009CB7B6 /* RecipeApp */ = {
 			isa = PBXGroup;
 			children = (
+				E589C83D2C6E1041000CF7C4 /* Font */,
 				E5EA91E42C68E3CF00CF276B /* RecipeApp.entitlements */,
 				E570AFAC2C6544BE00F945BE /* Shared */,
 				E5DB1B4A2C6142DA009CB7B6 /* Screen */,
