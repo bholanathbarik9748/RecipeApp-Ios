@@ -31,16 +31,34 @@ struct RecipeCard: View {
             }
             .cornerRadius(10)
             
-            // Meal Name
-            Text(mealName)
-                .font(.headline)
-                .foregroundColor(.primary)
-                .lineLimit(1)
-            
-            // Meal Category
-            Text(mealCategory)
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+            HStack {
+                // Meal Name
+                Text(mealName)
+                    .font(.custom("Roboto-Bold", size: 16))
+                    .foregroundColor(.primary)
+                    .lineLimit(1)
+                
+                Spacer()
+                
+                // Save Btn
+                Button (action: {
+                    print("hjj");
+                }) {
+                    HStack{
+                        Image(systemName: "bookmark.fill")
+                            .foregroundColor(.white)
+                        
+                        Text("Save")
+                            .font(.subheadline)
+                            .foregroundColor(.white)
+                        
+                    }
+                    .padding(.horizontal,10)
+                    .padding(.vertical,5)
+                    .background(Color("PrimaryOrange"))
+                    .cornerRadius(5)
+                }
+            }
         }
         .padding()
         .background(Color(.systemBackground))

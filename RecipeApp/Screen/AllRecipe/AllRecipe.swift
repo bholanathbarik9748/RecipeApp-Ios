@@ -11,7 +11,7 @@ struct AllRecipe: View {
     var body: some View {
         NavigationView{
             VStack{
-                ScrollView{
+                ScrollView {
                     RecipeCard(mealName: "Spaghetti Bolognese",
                                mealCategory: "Pasta",
                                mealImageUrl: "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg")
@@ -31,13 +31,15 @@ struct AllRecipe: View {
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Text("All Recipes")
-                        .font(.title)
+                    Text("All Recipes 🫕")
+                        .font(.custom("Roboto-Bold",
+                                      size: 25))
                         .fontWeight(.semibold)
                         .foregroundColor(Color("PrimaryOrange"))
                     
                 }
             }
+            .scrollIndicators(.hidden)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

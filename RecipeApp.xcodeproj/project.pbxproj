@@ -11,6 +11,10 @@
 		E589C8362C6DF099000CF7C4 /* AllRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589C8352C6DF099000CF7C4 /* AllRecipe.swift */; };
 		E589C8392C6DF0C6000CF7C4 /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589C8382C6DF0C6000CF7C4 /* UserRecipe.swift */; };
 		E589C83C2C6DF0FF000CF7C4 /* SavedRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589C83B2C6DF0FF000CF7C4 /* SavedRecipe.swift */; };
+		E589C8422C6E1213000CF7C4 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E589C8412C6E1213000CF7C4 /* Roboto-MediumItalic.ttf */; };
+		E589C8442C6E132B000CF7C4 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E589C8432C6E132B000CF7C4 /* Roboto-Thin.ttf */; };
+		E589C8462C6E1349000CF7C4 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E589C8452C6E1349000CF7C4 /* Roboto-Regular.ttf */; };
+		E589C8482C6E137E000CF7C4 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E589C8472C6E137D000CF7C4 /* Roboto-Bold.ttf */; };
 		E5DB1B352C61422E009CB7B6 /* RecipeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DB1B342C61422E009CB7B6 /* RecipeAppApp.swift */; };
 		E5DB1B392C614230009CB7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DB1B382C614230009CB7B6 /* Assets.xcassets */; };
 		E5DB1B3C2C614230009CB7B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5DB1B3B2C614230009CB7B6 /* Preview Assets.xcassets */; };
@@ -28,6 +32,11 @@
 		E589C8352C6DF099000CF7C4 /* AllRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipe.swift; sourceTree = "<group>"; };
 		E589C8382C6DF0C6000CF7C4 /* UserRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipe.swift; sourceTree = "<group>"; };
 		E589C83B2C6DF0FF000CF7C4 /* SavedRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipe.swift; sourceTree = "<group>"; };
+		E589C8402C6E1191000CF7C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E589C8412C6E1213000CF7C4 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		E589C8432C6E132B000CF7C4 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		E589C8452C6E1349000CF7C4 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		E589C8472C6E137D000CF7C4 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		E5DB1B312C61422E009CB7B6 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DB1B342C61422E009CB7B6 /* RecipeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAppApp.swift; sourceTree = "<group>"; };
 		E5DB1B382C614230009CB7B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +113,10 @@
 		E589C83D2C6E1041000CF7C4 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				E589C8412C6E1213000CF7C4 /* Roboto-MediumItalic.ttf */,
+				E589C8432C6E132B000CF7C4 /* Roboto-Thin.ttf */,
+				E589C8452C6E1349000CF7C4 /* Roboto-Regular.ttf */,
+				E589C8472C6E137D000CF7C4 /* Roboto-Bold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -127,8 +140,9 @@
 		E5DB1B332C61422E009CB7B6 /* RecipeApp */ = {
 			isa = PBXGroup;
 			children = (
-				E589C83D2C6E1041000CF7C4 /* Font */,
+				E589C8402C6E1191000CF7C4 /* Info.plist */,
 				E5EA91E42C68E3CF00CF276B /* RecipeApp.entitlements */,
+				E589C83D2C6E1041000CF7C4 /* Font */,
 				E570AFAC2C6544BE00F945BE /* Shared */,
 				E5DB1B4A2C6142DA009CB7B6 /* Screen */,
 				E5DB1B492C6142D3009CB7B6 /* ViewModel */,
@@ -269,7 +283,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E589C8442C6E132B000CF7C4 /* Roboto-Thin.ttf in Resources */,
 				E5DB1B3C2C614230009CB7B6 /* Preview Assets.xcassets in Resources */,
+				E589C8482C6E137E000CF7C4 /* Roboto-Bold.ttf in Resources */,
+				E589C8462C6E1349000CF7C4 /* Roboto-Regular.ttf in Resources */,
+				E589C8422C6E1213000CF7C4 /* Roboto-MediumItalic.ttf in Resources */,
 				E5DB1B392C614230009CB7B6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +448,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecipeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -461,6 +480,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecipeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
