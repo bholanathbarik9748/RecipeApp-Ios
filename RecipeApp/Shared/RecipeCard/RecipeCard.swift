@@ -48,7 +48,7 @@ struct RecipeCard: View {
                             .foregroundColor(.white)
                         
                         Text("Save")
-                            .font(.subheadline)
+                            .font(.custom("Roboto-Bold",size: 16))
                             .foregroundColor(.white)
                         
                     }
