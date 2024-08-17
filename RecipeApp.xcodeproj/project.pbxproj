@@ -30,6 +30,7 @@
 		E5DB1B592C614A8F009CB7B6 /* SingleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DB1B582C614A8F009CB7B6 /* SingleModel.swift */; };
 		E5EB28C72C70D3AF00D9559F /* RecipeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EB28C62C70D3AF00D9559F /* RecipeDescription.swift */; };
 		E5EB28C92C70DDF000D9559F /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EB28C82C70DDF000D9559F /* RecipeDetailsViewModel.swift */; };
+		E5EB28CF2C711AE100D9559F /* YouTubeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EB28CE2C711AE100D9559F /* YouTubeBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		E5EA91E42C68E3CF00CF276B /* RecipeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecipeApp.entitlements; sourceTree = "<group>"; };
 		E5EB28C62C70D3AF00D9559F /* RecipeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDescription.swift; sourceTree = "<group>"; };
 		E5EB28C82C70DDF000D9559F /* RecipeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModel.swift; sourceTree = "<group>"; };
+		E5EB28CE2C711AE100D9559F /* YouTubeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		E570AFAC2C6544BE00F945BE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E5EB28CA2C711AB200D9559F /* YouTubeBtn */,
 				E589C84D2C6E39A3000CF7C4 /* Filter */,
 				E570AFAE2C6545B700F945BE /* OwnRecipeCard */,
 				E570AFAD2C65459700F945BE /* RecipeCard */,
@@ -256,6 +259,14 @@
 			path = RecipeDescription;
 			sourceTree = "<group>";
 		};
+		E5EB28CA2C711AB200D9559F /* YouTubeBtn */ = {
+			isa = PBXGroup;
+			children = (
+				E5EB28CE2C711AE100D9559F /* YouTubeBtn.swift */,
+			);
+			path = YouTubeBtn;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5EB28CF2C711AE100D9559F /* YouTubeBtn.swift in Sources */,
 				E5DB1B572C614931009CB7B6 /* MealModel.swift in Sources */,
 				E589C84C2C6E27BF000CF7C4 /* RecipeServices.swift in Sources */,
 				E5DB1B532C614414009CB7B6 /* SplashScreen.swift in Sources */,

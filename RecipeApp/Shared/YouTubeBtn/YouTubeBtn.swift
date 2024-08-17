@@ -1,18 +1,51 @@
-//
-//  YouTubeBtn.swift
-//  RecipeApp
-//
-//  Created by Bholanath Barik on 17/08/24.
-//
-
 import SwiftUI
 
 struct YouTubeBtn: View {
+    let url: String
+    private var youtubeURL: URL? {
+        URL(string: url)
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button(action: {
+                openYouTubeLink()
+            }) {
+                
+                Text("Open Recipe YouTube")
+                    .font(.custom("Roboto-Regular", size: 16))
+                    .foregroundColor(.white)
+                    .padding(.horizontal,10)
+                    .padding(.vertical,5)
+                    .background(Color("PrimaryRed"))
+                    .cornerRadius(5)
+                    .padding(.vertical, 10)
+                    
+            }
+        }
+    }
+    
+    private func openYouTubeLink() {
+        // Ensure the URL is valid
+        guard let youtubeURL = youtubeURL else {
+            print("Invalid URL")
+            return
+        }
+        
+        // Use the YouTube URL scheme to check if the YouTube app can open the URL
+        let youtubeAppURL = URL(string: "youtube://\(youtubeURL.absoluteString)")
+        
+        if let youtubeAppURL = youtubeAppURL,
+           UIApplication.shared.canOpenURL(youtubeAppURL) {
+            // Open the link in YouTube app
+            UIApplication.shared.open(youtubeAppURL, options: [:], completionHandler: nil)
+        } else {
+            // Open the link in the default browser
+            UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
+        }
     }
 }
 
 #Preview {
-    YouTubeBtn()
+    YouTubeBtn(url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 }

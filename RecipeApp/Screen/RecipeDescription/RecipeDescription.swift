@@ -61,6 +61,8 @@ struct RecipeDescription: View {
                                     .cornerRadius(8)
                             }
                             .padding()
+                            
+                            YouTubeBtn(url: meal.strYoutube)
                         } else {
                             NoRecipesView()
                         }
@@ -196,6 +198,8 @@ struct IngredientsList: View {
 struct NoRecipesView: View {
     var body: some View {
         VStack {
+            Spacer();
+            
             Image(systemName: "tray")
                 .font(.system(size: 50))
                 .foregroundColor(.gray)
