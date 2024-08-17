@@ -224,7 +224,8 @@ struct TagView: View {
             Tag(text: strCategory, color: Color.orange.opacity(0.2))
             Tag(text: strArea, color: Color.red.opacity(0.2))
             if !strTags.isEmpty {
-                Tag(text: strTags, color: Color.red.opacity(0.2))
+                let formattedTags = strTags.hasSuffix(",") ? String(strTags.dropLast()) : strTags
+                Tag(text: formattedTags, color: Color.green.opacity(0.2))
             }
         }
         .padding(.vertical, 5)

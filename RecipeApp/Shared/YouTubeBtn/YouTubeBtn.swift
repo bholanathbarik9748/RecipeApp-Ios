@@ -2,6 +2,7 @@ import SwiftUI
 
 struct YouTubeBtn: View {
     let url: String
+    @State private var isError : Bool = false;
     private var youtubeURL: URL? {
         URL(string: url)
     }
@@ -20,14 +21,22 @@ struct YouTubeBtn: View {
                     .background(Color("PrimaryRed"))
                     .cornerRadius(5)
                     .padding(.vertical, 10)
-                    
+                
             }
         }
+        .alert(isPresented: $isError, content: {
+            Alert(
+                title: Text("Error"),
+                message: Text("We encountered an issue. Please try again later."),
+                dismissButton: .default(Text("OK"))
+            )
+        })
     }
     
     private func openYouTubeLink() {
         // Ensure the URL is valid
         guard let youtubeURL = youtubeURL else {
+            isError = true;
             print("Invalid URL")
             return
         }
