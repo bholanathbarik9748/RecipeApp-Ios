@@ -8,6 +8,7 @@ struct AllRecipe: View {
     @State private var selected: [String] = ["Indian", "Italian", "Chinese", "Mexican","American", "French",
                                              "Japanese", "Spanish", "Greek", "Thai", "Turkish", "Vietnamese"]
     var recipeServices = RecipeServices()
+    var recipeViewModel = AllRecipeViewMode()
     
     var body: some View {
         NavigationView {
@@ -56,7 +57,9 @@ struct AllRecipe: View {
                 } else {
                     ScrollView {
                         ForEach(viewModel.meals, id: \.idMeal) { recipe in
-                            RecipeCard(mealName: recipe.strMeal, mealImageUrl: recipe.strMealThumb)
+                            NavigationLink(destination: RecipeDescription(recipeId : recipe.idMeal)){
+                                RecipeCard(mealName: recipe.strMeal, mealImageUrl: recipe.strMealThumb)
+                            }
                         }
                     }
                 }
@@ -77,19 +80,18 @@ struct AllRecipe: View {
         }
     }
     
+    // Handler Functions
     private func fetchRecipes(for countryCode: String) {
         Task {
             withAnimation {
                 isLoading = true
             }
             do {
-                let fetchedRecipes = try await recipeServices.getAllRecipes(countryCode)
-                // Debugging: Print fetched recipes
+                let fetchedRecipes = try await recipeViewModel.fetchRecipes(for: countryCode)
                 DispatchQueue.main.async {
                     viewModel = fetchedRecipes
                 }
             } catch {
-                // Debugging: Print error
                 print("Error fetching recipes for \(countryCode): \(error)")
             }
             withAnimation {

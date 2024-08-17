@@ -12,7 +12,7 @@ struct Filter: View {
     
     var body: some View {
         Text(selected.prefix(1).capitalized + selected.dropFirst())
-            .font(.subheadline)
+            .font(.custom("Roboto-Bold", size: 16))
             .foregroundColor(.white)
             .padding(.horizontal,10)
             .padding(.vertical,5)

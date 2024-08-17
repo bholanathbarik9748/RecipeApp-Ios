@@ -8,7 +8,7 @@
 import Foundation
 
 // Top-level model
-struct MealsResponse: Codable {
+struct SingleMealsModel: Codable {
     let meals: [Meal]
 }
 
