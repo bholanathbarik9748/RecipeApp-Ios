@@ -58,7 +58,9 @@ struct AllRecipe: View {
                     ScrollView {
                         ForEach(viewModel.meals, id: \.idMeal) { recipe in
                             NavigationLink(destination: RecipeDescription(recipeId : recipe.idMeal)){
-                                RecipeCard(mealName: recipe.strMeal, mealImageUrl: recipe.strMealThumb)
+                                RecipeCard(mealId: recipe.idMeal,
+                                           mealName: recipe.strMeal,
+                                           mealImageUrl: recipe.strMealThumb)
                             }
                         }
                     }

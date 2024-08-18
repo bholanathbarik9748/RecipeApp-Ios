@@ -12,8 +12,7 @@ struct YouTubeBtn: View {
             Button(action: {
                 openYouTubeLink()
             }) {
-                
-                Text("Open Recipe YouTube")
+                Text("Video Tutorial")
                     .font(.custom("Roboto-Regular", size: 16))
                     .foregroundColor(.white)
                     .padding(.horizontal,10)

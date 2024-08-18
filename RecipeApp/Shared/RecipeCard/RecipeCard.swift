@@ -1,8 +1,16 @@
 import SwiftUI
 
 struct RecipeCard: View {
+    var mealId: String
     var mealName: String
     var mealImageUrl: String
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    @StateObject var ViewModel = SavedViewModel()
+    @State var isAlert: Bool = false
+    @State var isAlertMeg: String = ""
+    @State var isAlertHead: String = ""
+    @State var isSave: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -12,8 +20,7 @@ struct RecipeCard: View {
                     image
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 330,
-                               height: 150)
+                        .frame(width: 330, height: 150)
                         .clipped()
                 } placeholder: {
                     ProgressView()
@@ -40,21 +47,18 @@ struct RecipeCard: View {
                 Spacer()
                 
                 // Save Btn
-                Button (action: {
-                    print("hjj");
-                }) {
-                    HStack{
-                        Image(systemName: "bookmark.fill")
+                Button(action: handlerSaveToggle) {
+                    HStack {
+                        Image(systemName: isSave ? "bookmark.fill" : "bookmark")
                             .foregroundColor(.white)
                         
-                        Text("Save")
-                            .font(.custom("Roboto-Bold",size: 16))
+                        Text(isSave ? "Un-Save" : "Save")
+                            .font(.custom("Roboto-Bold", size: 16))
                             .foregroundColor(.white)
-                        
                     }
-                    .padding(.horizontal,10)
-                    .padding(.vertical,5)
-                    .background(Color("PrimaryOrange"))
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(isSave ? Color.gray.opacity(0.5) : Color("PrimaryOrange"))
                     .cornerRadius(5)
                 }
             }
@@ -64,11 +68,55 @@ struct RecipeCard: View {
         .cornerRadius(10)
         .shadow(radius: 5)
         .padding(.horizontal)
+        .alert(isPresented: $isAlert) {
+            Alert(
+                title: Text(isAlertHead),
+                message: Text(isAlertMeg),
+                dismissButton: .default(Text("OK"))
+            )
+        }
+        .onAppear {
+            isSave = ViewModel.isRecordsSaved(context: viewContext, idMeal: mealId)
+        }
+    }
+    
+    private func handlerSaveToggle()  {
+        if isSave {
+            let response = ViewModel.deleteRecord(context: viewContext, idMeal: mealId)
+            isAlert = true;
+            if response["status"] as? String == "success" {
+                isSave = false
+                isAlertMeg = response["message"] as! String
+                isAlertHead = "Success"
+            } else {
+                isSave = false
+                isAlertMeg = response["message"] as! String
+                isAlertHead = "Error"
+            }
+        } else {
+            let response = ViewModel.createRecord(
+                context: viewContext,
+                idMeal: mealId,
+                strMeal: mealName,
+                strMealThumb: mealImageUrl
+            )
+            isAlert = true
+            if response["status"] as? String == "success" {
+                isSave = true
+                isAlertMeg = response["message"] as! String
+                isAlertHead = "Success"
+            } else {
+                isSave = true
+                isAlertMeg = response["message"] as! String
+                isAlertHead = "Error"
+            }
+        }
     }
 }
 
 #Preview {
     RecipeCard(
+        mealId: "1",
         mealName: "Spaghetti Bolognese",
         mealImageUrl: "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg"
     )
