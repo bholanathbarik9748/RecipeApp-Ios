@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CreateRecipeForm: View {
-    @State private var recipe: OwnRecipe = OwnRecipe()
+    @State private var recipe: OwnRecipeModel = OwnRecipeModel(id: UUID());
     @State private var isAlert : Bool = false;
     @State private var isAlertMessage : String = "";
     
@@ -36,10 +36,7 @@ struct CreateRecipeForm: View {
                             .stroke(Color.orange, lineWidth: 1)
                     )
                     .padding(.horizontal)
-                
-                // Ingredients Table
-                IngredientsCreateTable(ingredients: $recipe.ingredients)
-                    .padding(.horizontal)
+
                 
                 // Instruction
                 TextField("Instruction", text: $recipe.instruction, axis: .vertical)
@@ -96,78 +93,6 @@ struct CreateRecipeForm: View {
         }
         .background(Color(UIColor.systemGroupedBackground))
         .ignoresSafeArea(edges: .bottom)
-    }
-}
-
-struct IngredientsCreateTable: View {
-    @Binding var ingredients: [Ingredient]
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack {
-                Text("Ingredient")
-                    .font(.subheadline)
-                    .padding(.horizontal)
-                    .fontWeight(.semibold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Text("Quantity")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .padding(.vertical, 8)
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(10)
-            
-            ForEach($ingredients) { $ingredient in
-                HStack {
-                    TextField("Enter Ingredient", text: $ingredient.name)
-                        .padding(10)
-                        .background(Color.gray.opacity(0.1))
-                        .cornerRadius(10)
-                    
-                    TextField("Enter Quantity", text: $ingredient.quantity)
-                        .padding(10)
-                        .background(Color.gray.opacity(0.1))
-                        .cornerRadius(10)
-                    
-                    Button(action: {
-                        self.deleteIngredient(ingredient.id)
-                    }) {
-                        Image(systemName: "trash")
-                            .foregroundColor(.red)
-                            .padding()
-                            .background(Color.gray.opacity(0.1))
-                            .cornerRadius(8)
-                    }
-                    .padding(.leading, 10)
-                }
-                .padding(.vertical, 5)
-            }
-            
-            Button(action: {
-                addNewIngredient()
-            }, label: {
-                Text("Add New Ingredient")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            })
-            .padding(.top, 10)
-        }
-        .padding(.top, 20)
-    }
-    
-    private func deleteIngredient(_ id: UUID) {
-        ingredients.removeAll { $0.id == id }
-    }
-    
-    private func addNewIngredient() {
-        ingredients.append(Ingredient(name: "", quantity: ""))
     }
 }
 

@@ -3,6 +3,14 @@
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="OwnRecipes" representedClassName="OwnRecipes" syncable="YES" codeGenerationType="class">
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="instruction" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="videoLink" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="SavedRecipes" representedClassName="SavedRecipes" syncable="YES" codeGenerationType="class">
         <attribute name="idMeal" optional="YES" attributeType="String"/>
         <attribute name="strMeal" optional="YES" attributeType="String"/>

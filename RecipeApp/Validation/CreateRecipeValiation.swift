@@ -19,7 +19,7 @@ class CreateRecipeValidation {
             return predicate.evaluate(with: link)
         }
     
-    func validate(_ formData: OwnRecipe) -> ValidationResult {
+    func validate(_ formData: OwnRecipeModel) -> ValidationResult {
         if formData.title.isEmpty {
             return .failure(message: "Please enter the recipe title.")
         }
@@ -31,11 +31,7 @@ class CreateRecipeValidation {
         if formData.country.isEmpty {
             return .failure(message: "Please enter the country name.")
         }
-        
-        if formData.ingredients.isEmpty {
-            return .failure(message: "Please add at least one ingredient.")
-        }
-        
+                
         if formData.instruction.isEmpty {
             return .failure(message: "Please enter the instructions.")
         }
