@@ -70,7 +70,7 @@ struct CreateRecipeForm: View {
                 // Save Button
                 Button(action: {
                     // Action to save the recipe
-                    let isValidForm = CreateRecipeValidation().validate(recipe);
+                    let isValidForm = CreateRecipeValidation().validate(recipe)
                     switch isValidForm {
                     case .success:
                         let response = ViewModel.createRecord(
@@ -80,20 +80,24 @@ struct CreateRecipeForm: View {
                             instruction: recipe.instruction,
                             name: recipe.title,
                             type: recipe.type?.rawValue ?? " ",
-                            videoLink: recipe.videoLink)
+                            videoLink: recipe.videoLink
+                        )
+                        
                         if response["status"] as? String == "success" {
-                            isAlert = true;
-                            isAlertMeg = response["message"] as! String
+                            isAlert = true
+                            isAlertMeg = response["message"] as? String ?? "Operation successful."
                             isAlertHead = "Success"
                             presentationMode.wrappedValue.dismiss()
                         } else {
-                            isAlert = true;
-                            isAlertMeg = response["message"] as! String
+                            isAlert = true
+                            isAlertMeg = response["message"] as? String ?? "An error occurred."
                             isAlertHead = "Error"
                         }
-                    case .failure(let message) :
-                        isAlertMessage = message;
-                        isAlert = true;
+                        
+                    case .failure(let message):
+                        isAlertMeg = message
+                        isAlert = true
+                        isAlertHead = "Validation Error"
                     }
                 }) {
                     Text("Save Recipe")
