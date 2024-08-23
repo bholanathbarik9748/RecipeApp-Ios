@@ -66,17 +66,30 @@ class OwnRecipeViewModel: ObservableObject {
         }
     }
     
-    //     Function to fetch all records from Core Data
+    //  Function to fetch all records from Core Data
     func getAllRecords(context: NSManagedObjectContext) -> [OwnRecipes] {
-        let fetchRequest: NSFetchRequest<OwnRecipes> = OwnRecipes.fetchRequest();
+        let fetchRequest: NSFetchRequest<OwnRecipes> = RecipeApp.OwnRecipes.fetchRequest()
         do {
-            // Fetch records from Core Data
-            let results = try context.fetch(fetchRequest)
-            return results
+            ownRecipe = try context.fetch(fetchRequest)
+            return ownRecipe
         } catch {
-            // Print error message if fetching fails
             print("Failed to fetch all records: \(error.localizedDescription)")
             return []
+        }
+    }
+    
+    // Fetch a single record by ID
+    func getRecordById(context: NSManagedObjectContext, id: UUID) -> OwnRecipes? {
+        let fetchRequest: NSFetchRequest<OwnRecipes> = RecipeApp.OwnRecipes.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+        fetchRequest.fetchLimit = 1
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            return results.first
+        } catch {
+            print("Failed to fetch record by ID: \(error.localizedDescription)")
+            return nil
         }
     }
 }

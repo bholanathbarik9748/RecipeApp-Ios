@@ -1,18 +1,34 @@
-//
-//  UserRecipe.swift
-//  RecipeApp
-//
-//  Created by Bholanath Barik on 15/08/24.
-//
-
 import SwiftUI
 
 struct UserRecipe: View {
+    @State private var isLoading: Bool = false
+    
     var body: some View {
         NavigationView {
-            CreateNewRecipeView()
+            ScrollView {                
+                // Recipe List View
+                CreateRecipeList()
+            }
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Text("All Recipes 🫕")
+                            .font(.custom("Roboto-Bold", size: 25))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("PrimaryOrange"))
+                        
+                        Spacer() // This will push the CreateNewRecipeView to the right end
+                        
+                        CreateNewRecipeView() // Move this here to align it to the right
+                    }
+                }
+            }
+            .scrollIndicators(.hidden)
+            .onAppear {
+                // Any initialization logic if needed
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
-        .navigationTitle("Your Recipes")
     }
 }
 
@@ -22,24 +38,19 @@ struct UserRecipe: View {
 
 struct CreateNewRecipeView: View {
     var body: some View {
-        NavigationLink(destination: CreateRecipeForm()) { // Use NavigationLink correctly
+        NavigationLink(destination: CreateRecipeForm()) {
             HStack {
                 Image(systemName: "plus")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 20, height: 20)
+                    .frame(width: 10, height: 10)
                     .foregroundColor(.white)
-                
-                Text("Create Your Recipe")
-                    .font(.custom("Roboto-Regular", size: 20))
-                    .foregroundColor(.white)
-                    .padding(.vertical, 4)
-                    .padding(.leading, 8)
             }
-            .padding()
+            .padding(.horizontal,10)
+            .padding(.vertical,5)
             .background(Color("PrimaryOrange"))
-            .cornerRadius(8)
-            .shadow(radius: 4)
+            .cornerRadius(5)
+            .padding(.vertical, 10)
         }
     }
 }

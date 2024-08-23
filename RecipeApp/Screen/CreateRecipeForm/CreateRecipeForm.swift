@@ -4,6 +4,13 @@ struct CreateRecipeForm: View {
     @State private var recipe: OwnRecipeModel = OwnRecipeModel(id: UUID());
     @State private var isAlert : Bool = false;
     @State private var isAlertMessage : String = "";
+    @State private var isSave : Bool = false;
+    @State private var isAlertMeg : String = "";
+    @State private var isAlertHead : String = "";
+    
+    @Environment(\.managedObjectContext) private var viewContext;
+    @Environment(\.presentationMode) var presentationMode;
+    private var ViewModel = OwnRecipeViewModel();
     
     var body: some View {
         ScrollView {
@@ -36,7 +43,7 @@ struct CreateRecipeForm: View {
                             .stroke(Color.orange, lineWidth: 1)
                     )
                     .padding(.horizontal)
-
+                
                 
                 // Instruction
                 TextField("Instruction", text: $recipe.instruction, axis: .vertical)
@@ -66,7 +73,24 @@ struct CreateRecipeForm: View {
                     let isValidForm = CreateRecipeValidation().validate(recipe);
                     switch isValidForm {
                     case .success:
-                        print("Sussess");
+                        let response = ViewModel.createRecord(
+                            context: viewContext,
+                            id: UUID(),
+                            country: recipe.country,
+                            instruction: recipe.instruction,
+                            name: recipe.title,
+                            type: recipe.type?.rawValue ?? " ",
+                            videoLink: recipe.videoLink)
+                        if response["status"] as? String == "success" {
+                            isAlert = true;
+                            isAlertMeg = response["message"] as! String
+                            isAlertHead = "Success"
+                            presentationMode.wrappedValue.dismiss()
+                        } else {
+                            isAlert = true;
+                            isAlertMeg = response["message"] as! String
+                            isAlertHead = "Error"
+                        }
                     case .failure(let message) :
                         isAlertMessage = message;
                         isAlert = true;
@@ -93,6 +117,13 @@ struct CreateRecipeForm: View {
         }
         .background(Color(UIColor.systemGroupedBackground))
         .ignoresSafeArea(edges: .bottom)
+        .alert(isPresented: $isAlert, content: {
+            Alert(
+                title: Text(isAlertHead),
+                message: Text(isAlertMeg),
+                dismissButton: .default(Text("OK"))
+            )
+        })
     }
 }
 
