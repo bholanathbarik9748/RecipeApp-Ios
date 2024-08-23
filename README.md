@@ -1,25 +1,3 @@
 
 
-https://github.com/user-attachments/assets/bee3c![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 03 02](https://github.com/user-attachments/assets/47c286f0-83d0-4917-8357-366a501cff4a)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 59](https://github.com/user-attachments/assets/e538797c-b60a-4988-9cb0-128da7fca62a)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 52](https://github.com/user-attachments/assets/07024180-8acf-42a0-aa6d-f6d1abed667a)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 47](https://github.com/user-attachments/assets/939a0c60-9310-47e2-8262-32ba8298bda9)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 43](https://github.com/user-attachments/assets/b0d1a13a-4d65-4496-9154-84b5f3fd4601)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 37](https://github.com/user-attachments/assets/278f4e66-02cf-42b1-a3a6-ac62c935ada2)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 32](https://github.com/user-attachments/assets/807edc50-1a04-46c9-8990-a7ec3b5ad293)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 28](https://github.com/user-attachments/assets/6d7f48e4-d13c-4910-aefe-f92a75e6d3c8)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 23](https://github.com/user-attachments/assets/8897dab2-257b-4696-8e1c-cce8a342284b)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 19](https://github.com/user-attachments/assets/05044773-a1fb-4c6b-b6ec-389425d66454)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 16](https://github.com/user-attachments/assets/ec10f649-8093-441f-899b-a56f057d1d90)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 12](https://github.com/user-attachments/assets/c0ed0bb8-a2c0-43ec-898b-29e157321654)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 10](https://github.com/user-attachments/assets/c1de84bd-b1ba-4c0a-9d84-263d491cca9c)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 02 03](https://github.com/user-attachments/assets/649ec16c-4c59-45d3-babe-47c4c42160af)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 01 58](https://github.com/user-attachments/assets/a35f6abe-ee00-4c06-9e76-b653093d5ed8)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 01 54](https://github.com/user-attachments/assets/28328461-056a-4039-934e-6bb51f1f9a4f)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 01 49](https://github.com/user-attachments/assets/59e2b3f2-8c3e-4ed1-a50e-f8f7561daeff)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 01 45](https://github.com/user-attachments/assets/64b8c0cd-e2e7-4aba-8aa8-707035d60387)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 01 38](https://github.com/user-attachments/assets/bea73f8e-857d-4e41-99c0-2ddc93d2cdb1)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 01 32](https://github.com/user-attachments/assets/a76d31c1-7e45-45e6-ab22-657d2e6a126f)
-![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 01 26](https://github.com/user-attachments/assets/d6a85a15-bfac-4298-8a0f-6f1a0f7da60a)
-2d4-b0f6-42f3-a713-54a8b37e4650
-
+https://github.com/user-attachments/assets/bee3c![Simulator Screenshot - iPhone 15 Pro - 2024-08-23 at 21 03 02]
